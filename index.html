@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -36,6 +35,10 @@ body {
     min-height: 100vh;
 }
 
+/* =========================================
+   HEADER
+========================================= */
+
 .header {
     height: 75px;
     background: var(--black);
@@ -65,11 +68,19 @@ body {
     color: #bbb;
 }
 
+/* =========================================
+   CONTAINER
+========================================= */
+
 .container {
     max-width: 1150px;
     margin: auto;
     padding: 40px 25px 60px;
 }
+
+/* =========================================
+   HERO
+========================================= */
 
 .hero {
     background: linear-gradient(115deg, #ff7417, #ff913c);
@@ -78,7 +89,7 @@ body {
     color: white;
     position: relative;
     overflow: hidden;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .hero h1 {
@@ -119,6 +130,46 @@ body {
     pointer-events: none;
 }
 
+/* =========================================
+   ABAS
+========================================= */
+
+.main-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.main-tab {
+    height: 48px;
+    border: 1px solid #e4e4e4;
+    background: white;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    color: #666;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.main-tab:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+.main-tab.active {
+    background: var(--orange);
+    color: white;
+    border-color: var(--orange);
+    box-shadow: 0 5px 15px #ff741725;
+}
+
+/* =========================================
+   CALCULADORA
+========================================= */
+
 .calculator {
     background: white;
     border: 1px solid var(--border);
@@ -139,6 +190,10 @@ body {
     line-height: 1.6;
     margin-bottom: 25px;
 }
+
+/* =========================================
+   TIPO DE SERVIÇO
+========================================= */
 
 .type-selector {
     display: grid;
@@ -177,6 +232,10 @@ body {
     font-size: 10px;
     color: #888;
 }
+
+/* =========================================
+   FORMULÁRIOS
+========================================= */
 
 .form-grid {
     display: grid;
@@ -224,7 +283,7 @@ body {
 }
 
 /* =========================================
-   CALENDÁRIO PERSONALIZADO
+   CALENDÁRIO
 ========================================= */
 
 .date-wrapper {
@@ -550,6 +609,148 @@ body {
     margin-bottom: 5px;
 }
 
+/* =========================================
+   VALORES DAS MULTAS
+========================================= */
+
+.fines-page {
+    display: none;
+}
+
+.fines-page.visible {
+    display: block;
+    animation: appear .25s ease;
+}
+
+.fines-header {
+    margin-bottom: 25px;
+}
+
+.fines-header h2 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.fines-header p {
+    font-size: 11px;
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #e3e3e3;
+    border-radius: 9px;
+    padding: 0 15px;
+    outline: none;
+    font-family: inherit;
+    font-size: 12px;
+    background: white;
+}
+
+.search-box input:focus {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px #ff741718;
+}
+
+.fines-section {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 25px #00000005;
+}
+
+.fines-section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.fines-section-title h3 {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.fines-section-title span {
+    font-size: 9px;
+    background: #fff2e8;
+    color: var(--orange-dark);
+    padding: 6px 9px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.fines-list {
+    display: grid;
+    gap: 8px;
+}
+
+.fine-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 15px;
+    border: 1px solid #eeeeee;
+    border-radius: 9px;
+    transition: .15s;
+}
+
+.fine-item:hover {
+    border-color: #ffc9a5;
+    background: #fffaf6;
+}
+
+.fine-name {
+    font-size: 11px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.fine-value {
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--orange);
+}
+
+.no-results {
+    display: none;
+    text-align: center;
+    padding: 30px 15px;
+    color: #999;
+    font-size: 11px;
+}
+
+.fines-note {
+    background: #fff8f2;
+    border: 1px solid #ffe3ce;
+    padding: 17px;
+    border-radius: 9px;
+    font-size: 10px;
+    color: #925126;
+    line-height: 1.8;
+}
+
+.fines-note strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
 .footer {
     text-align: center;
     margin-top: 30px;
@@ -588,6 +789,10 @@ body {
         padding: 21px;
     }
 
+    .main-tabs {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .type-selector {
         grid-template-columns: 1fr;
     }
@@ -607,6 +812,20 @@ body {
     .calendar-popup {
         width: 100%;
         max-width: 310px;
+    }
+
+    .fines-section {
+        padding: 18px;
+    }
+
+    .fine-item {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .fine-value {
+        font-size: 14px;
     }
 }
 
@@ -676,6 +895,38 @@ body {
 
 </section>
 
+
+<!-- =========================================
+     ABAS PRINCIPAIS
+========================================= -->
+
+<div class="main-tabs">
+
+    <button
+        class="main-tab active"
+        id="calculatorTab"
+        onclick="showMainTab('calculator')"
+    >
+        🧮 Calculadora de multas
+    </button>
+
+    <button
+        class="main-tab"
+        id="finesTab"
+        onclick="showMainTab('fines')"
+    >
+        💰 Valor das multas
+    </button>
+
+</div>
+
+
+<!-- =========================================
+     PÁGINA DA CALCULADORA
+========================================= -->
+
+<div id="calculatorPage">
+
 <section class="calculator">
 
 <h2 class="section-title">
@@ -722,9 +973,8 @@ body {
 
 </div>
 
-<!-- =========================================
-     INTERNET
-========================================= -->
+
+<!-- INTERNET -->
 
 <div id="internetForm">
 
@@ -750,8 +1000,6 @@ body {
 
 </div>
 
-
-<!-- DATA DA RENOVAÇÃO -->
 
 <div class="field">
 
@@ -783,8 +1031,6 @@ body {
 
 </div>
 
-
-<!-- DATA DO CANCELAMENTO -->
 
 <div class="field">
 
@@ -821,9 +1067,7 @@ body {
 </div>
 
 
-<!-- =========================================
-     CÂMERAS
-========================================= -->
+<!-- CÂMERAS -->
 
 <div
     id="cameraForm"
@@ -865,9 +1109,7 @@ body {
 </button>
 
 
-<!-- =========================================
-     RESULTADO
-========================================= -->
+<!-- RESULTADO -->
 
 <div
     class="result"
@@ -1027,6 +1269,330 @@ A ferramenta realiza uma simulação matemática com os dados informados.
 
 </section>
 
+</div>
+
+
+<!-- =========================================
+     PÁGINA DE VALORES DAS MULTAS
+========================================= -->
+
+<div
+    id="finesPage"
+    class="fines-page"
+>
+
+<div class="fines-header">
+
+<h2>
+    Valor das multas
+</h2>
+
+<p>
+    Consulte rapidamente o valor integral da multa de cada plano ou serviço.
+    Utilize a busca abaixo para localizar um item específico.
+</p>
+
+</div>
+
+
+<div class="search-box">
+
+<input
+    type="search"
+    id="fineSearch"
+    placeholder="🔎 Pesquisar plano ou serviço..."
+    oninput="searchFines()"
+>
+
+</div>
+
+
+<!-- MULTA GERAL -->
+
+<section class="fines-section">
+
+<div class="fines-section-title">
+
+<h3>
+    Multa Geral
+</h3>
+
+<span>
+    17 itens
+</span>
+
+</div>
+
+<div class="fines-list" id="generalFinesList">
+
+<div class="fine-item">
+    <div class="fine-name">Todos os Conect</div>
+    <div class="fine-value">R$ 480,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">Conect PME</div>
+    <div class="fine-value">R$ 960,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">Banda larga (250 Mega / 500 Mega / 1 Giga)</div>
+    <div class="fine-value">R$ 720,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">1 Giga + Mesh</div>
+    <div class="fine-value">R$ 1.218,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">Cada Mesh adicional</div>
+    <div class="fine-value">R$ 270,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">AI Fixo básico</div>
+    <div class="fine-value">R$ 360,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">AI Fixo ilimitado</div>
+    <div class="fine-value">R$ 420,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">ExitLag (por licença)</div>
+    <div class="fine-value">R$ 60,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">IP fixo</div>
+    <div class="fine-value">R$ 360,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">PlayHub</div>
+    <div class="fine-value">R$ 120,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">Watch</div>
+    <div class="fine-value">R$ 60,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">Watch + HBO Max</div>
+    <div class="fine-value">R$ 180,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">Sky+ Light</div>
+    <div class="fine-value">R$ 60,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">Sky+ Full</div>
+    <div class="fine-value">R$ 120,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">AI Fixo básico — PME</div>
+    <div class="fine-value">R$ 480,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">AI Fixo ilimitado — PME</div>
+    <div class="fine-value">R$ 540,00</div>
+</div>
+
+</div>
+
+<div class="no-results" id="generalNoResults">
+    Nenhum item encontrado.
+</div>
+
+</section>
+
+
+<!-- SÃO CARLOS -->
+
+<section class="fines-section">
+
+<div class="fines-section-title">
+
+<h3>
+    São Carlos
+</h3>
+
+<span>
+    27 itens
+</span>
+
+</div>
+
+<div class="fines-list" id="saoCarlosFinesList">
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Essencial 1 Giga</div>
+    <div class="fine-value">R$ 500,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Básico 1 Giga</div>
+    <div class="fine-value">R$ 200,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Essencial 1 Giga + Paramount</div>
+    <div class="fine-value">R$ 680,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Essencial 1G + WPM</div>
+    <div class="fine-value">R$ 860,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Essencial 1G + SkyL</div>
+    <div class="fine-value">R$ 620,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Essencial 1G + SkyF</div>
+    <div class="fine-value">R$ 680,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Essencial 1G + Mesh</div>
+    <div class="fine-value">R$ 840,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Essencial 1 Giga + Mesh + Max + Paramount</div>
+    <div class="fine-value">R$ 1.080,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Essencial 1 Giga + Fx Bas (Telefonia básica)</div>
+    <div class="fine-value">R$ 560,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Essencial 1 Giga + Fxi Brasil (Telefonia ilimitada)</div>
+    <div class="fine-value">R$ 680,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Master 2.5 Giga</div>
+    <div class="fine-value">R$ 1.010,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Básico 2.5 Giga</div>
+    <div class="fine-value">R$ 620,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Master 2.5G + WP</div>
+    <div class="fine-value">R$ 1.190,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Master 2.5G + WPM</div>
+    <div class="fine-value">R$ 1.310,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Essencial 2.5G + SkyL</div>
+    <div class="fine-value">R$ 1.070,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Essencial 2.5G + SkyF</div>
+    <div class="fine-value">R$ 1.160,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Essencial 2.5G + Mesh</div>
+    <div class="fine-value">R$ 1.387,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Essencial 2.5 Giga + Mesh + Max + Paramount</div>
+    <div class="fine-value">R$ 1.627,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Essencial 2.5 Giga + Fx Bas (Telefonia básica)</div>
+    <div class="fine-value">R$ 1.070,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Essencial 2.5 Giga + Fxi Brasil (Telefonia ilimitada)</div>
+    <div class="fine-value">R$ 1.190,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">CF - Conect Premium 10 Giga + Mesh</div>
+    <div class="fine-value">R$ 1.040,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">Mesh (adicional)</div>
+    <div class="fine-value">R$ 120,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">AI Fixo básico</div>
+    <div class="fine-value">R$ 60,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">AI Fixo ilimitado</div>
+    <div class="fine-value">R$ 180,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">Watch</div>
+    <div class="fine-value">R$ 120,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">Watch + HBO Max</div>
+    <div class="fine-value">R$ 240,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">Sky+ Light e Sky+ Full</div>
+    <div class="fine-value">R$ 60,00</div>
+</div>
+
+<div class="fine-item">
+    <div class="fine-name">Sky+ Light ou Sky+ Full com 3 adicionais (Telecine, Premiere e Combate)</div>
+    <div class="fine-value">R$ 120,00</div>
+</div>
+
+</div>
+
+<div class="no-results" id="saoCarlosNoResults">
+    Nenhum item encontrado.
+</div>
+
+</section>
+
+
+<div class="fines-note">
+
+<strong>
+    ⓘ Atenção
+</strong>
+
+Consulte sempre a categoria e a localidade correta antes de informar o valor ao cliente. Os valores apresentados são os valores integrais de referência para utilização na calculadora.
+
+</div>
+
+</div>
+
 
 <footer class="footer">
 
@@ -1052,6 +1618,181 @@ let lastCalculation = '';
 let renewalDateValue = '';
 
 let cancelDateValue = '';
+
+
+/* =====================================================
+   ABAS PRINCIPAIS
+===================================================== */
+
+function showMainTab(tab) {
+
+    const calculatorPage =
+        document.getElementById(
+            'calculatorPage'
+        );
+
+    const finesPage =
+        document.getElementById(
+            'finesPage'
+        );
+
+    const calculatorTab =
+        document.getElementById(
+            'calculatorTab'
+        );
+
+    const finesTab =
+        document.getElementById(
+            'finesTab'
+        );
+
+
+    if (tab === 'calculator') {
+
+        calculatorPage.style.display =
+            'block';
+
+        finesPage.classList.remove(
+            'visible'
+        );
+
+        calculatorTab.classList.add(
+            'active'
+        );
+
+        finesTab.classList.remove(
+            'active'
+        );
+
+    } else {
+
+        calculatorPage.style.display =
+            'none';
+
+        finesPage.classList.add(
+            'visible'
+        );
+
+        calculatorTab.classList.remove(
+            'active'
+        );
+
+        finesTab.classList.add(
+            'active'
+        );
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+    }
+
+}
+
+
+/* =====================================================
+   PESQUISA DOS VALORES
+===================================================== */
+
+function searchFines() {
+
+    const search =
+        document.getElementById(
+            'fineSearch'
+        ).value
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(
+            /[\u0300-\u036f]/g,
+            ''
+        )
+        .trim();
+
+
+    const lists = [
+
+        {
+            list:
+                document.getElementById(
+                    'generalFinesList'
+                ),
+
+            noResults:
+                document.getElementById(
+                    'generalNoResults'
+                )
+
+        },
+
+        {
+            list:
+                document.getElementById(
+                    'saoCarlosFinesList'
+                ),
+
+            noResults:
+                document.getElementById(
+                    'saoCarlosNoResults'
+                )
+
+        }
+
+    ];
+
+
+    lists.forEach(data => {
+
+        const items =
+            data.list.querySelectorAll(
+                '.fine-item'
+            );
+
+        let visible =
+            0;
+
+
+        items.forEach(item => {
+
+            const name =
+                item
+                    .querySelector(
+                        '.fine-name'
+                    )
+                    .textContent
+                    .toLowerCase()
+                    .normalize('NFD')
+                    .replace(
+                        /[\u0300-\u036f]/g,
+                        ''
+                    );
+
+
+            const matches =
+                name.includes(search);
+
+
+            item.style.display =
+                matches
+                    ? 'flex'
+                    : 'none';
+
+
+            if (matches) {
+                visible++;
+            }
+
+        });
+
+
+        data.noResults.style.display =
+            visible === 0
+                ? 'block'
+                : 'none';
+
+    });
+
+}
 
 
 /* =====================================================
@@ -1085,11 +1826,6 @@ function parseMoneyToCents(value) {
 /* =====================================================
    DATAS
 ===================================================== */
-
-/*
- * Recebe AAAA-MM-DD
- * e cria uma data UTC segura.
- */
 
 function parseDate(value) {
 
@@ -1125,10 +1861,6 @@ function parseDate(value) {
 }
 
 
-/*
- * Converte uma data para AAAA-MM-DD.
- */
-
 function dateToISO(date) {
 
     const year =
@@ -1148,10 +1880,6 @@ function dateToISO(date) {
 }
 
 
-/*
- * Formata uma data para DD/MM/AAAA.
- */
-
 function formatBrazilianDate(date) {
 
     const day =
@@ -1170,10 +1898,6 @@ function formatBrazilianDate(date) {
     return `${day}/${month}/${year}`;
 }
 
-
-/*
- * Adiciona meses mantendo o dia original quando possível.
- */
 
 function addMonths(date, months) {
 
@@ -1219,10 +1943,6 @@ function addMonths(date, months) {
     );
 }
 
-
-/*
- * Diferença entre duas datas em dias.
- */
 
 function daysBetween(start, end) {
 
@@ -1283,10 +2003,6 @@ const weekNames = [
 
 let calendars = {};
 
-
-/*
- * Cria um calendário.
- */
 
 function createCalendar(
     calendarId,
@@ -1372,10 +2088,6 @@ function createCalendar(
     renderCalendar(type);
 }
 
-
-/*
- * Renderiza o calendário.
- */
 
 function renderCalendar(type) {
 
@@ -1470,10 +2182,6 @@ function renderCalendar(type) {
     `;
 
 
-    /*
-     * Dias do mês anterior.
-     */
-
     for (
         let i = firstDay - 1;
         i >= 0;
@@ -1510,10 +2218,6 @@ function renderCalendar(type) {
 
     }
 
-
-    /*
-     * Dias do mês atual.
-     */
 
     const today =
         new Date();
@@ -1575,10 +2279,6 @@ function renderCalendar(type) {
     }
 
 
-    /*
-     * Dias do próximo mês.
-     */
-
     const totalCells =
         firstDay +
         daysInMonth;
@@ -1633,10 +2333,6 @@ function renderCalendar(type) {
 }
 
 
-/*
- * Troca o mês.
- */
-
 function changeMonth(
     type,
     direction
@@ -1669,10 +2365,6 @@ function changeMonth(
     renderCalendar(type);
 }
 
-
-/*
- * Seleciona uma data.
- */
 
 function selectCalendarDate(
     type,
@@ -1743,10 +2435,6 @@ function selectCalendarDate(
 }
 
 
-/*
- * Fecha os outros calendários.
- */
-
 function closeAllCalendars(
     exceptId
 ) {
@@ -1770,10 +2458,6 @@ function closeAllCalendars(
 }
 
 
-/*
- * Fecha calendários ao clicar fora.
- */
-
 document.addEventListener(
     'click',
     function() {
@@ -1785,7 +2469,7 @@ document.addEventListener(
 
 
 /* =====================================================
-   INICIALIZAÇÃO DOS CALENDÁRIOS
+   INICIALIZAÇÃO
 ===================================================== */
 
 createCalendar(
@@ -2041,10 +2725,6 @@ function calculateInternet() {
     }
 
 
-    /*
-     * Fidelidade de 12 meses.
-     */
-
     const endDate =
         addMonths(
             renewal,
@@ -2087,10 +2767,6 @@ function calculateInternet() {
         return;
     }
 
-
-    /*
-     * Fidelidade encerrada.
-     */
 
     if (
         remainingDays === 0
@@ -2135,13 +2811,6 @@ function calculateInternet() {
         return;
     }
 
-
-    /*
-     * Multa proporcional:
-     *
-     * multa integral × dias restantes
-     * ÷ dias totais
-     */
 
     const penaltyCents =
         Math.round(
@@ -2233,16 +2902,6 @@ function calculateCamera() {
         return;
     }
 
-
-    /*
-     * Valor de referência:
-     *
-     * mensalidade × 36
-     *
-     * Multa:
-     *
-     * 30% do valor de referência.
-     */
 
     const referenceCents =
         monthlyCents * 36;
